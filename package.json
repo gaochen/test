@@ -1,0 +1,23 @@
+{
+  "name": "activity",
+  "version": "1.0.0",
+  "description": "kaimenkong",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaochen/activity.git"
+  },
+  "author": "gaochen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaochen/activity/issues"
+  },
+  "homepage": "https://github.com/gaochen/activity#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  }
+}
