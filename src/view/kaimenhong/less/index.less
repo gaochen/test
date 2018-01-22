@@ -1,9 +1,12 @@
 .index {
   min-height: 100%;
+  width: 750px;
+  overflow: hidden;
+  margin: 0 auto;
   position: relative;
 
   .bg {
-    width: 750px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
@@ -60,6 +63,87 @@
       margin-left: 30px;
       margin-top: 364px;
       overflow: hidden;
+
+      .title {
+        width: 638px;
+        height: 202px;
+        margin: 0 auto;
+        background-image: url('../img/index-09.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      .imgBox {
+        width: 605px;
+        height: 333px;
+        overflow: hidden;
+        margin: 0 auto 40px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+        img {
+          width: 290px;
+          height: 154px;
+          display: block;
+          overflow: hidden;
+        }
+      }
+
+      .text {
+        width: 100%;
+        height: auto;
+        font-size: 28px;
+        color: #666666;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .check {
+        width: 150px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 40px;
+
+        span {
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-image: url('../img/index-14.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: 24px;
+          width: 120px;
+          color: #b2b2b2;
+        }
+      }
+      .checkActive {
+        span {
+          background-image: url('../img/index-15.png');
+        }
+        p {
+          color: #f8623e;
+        }
+      }
+      .btn {
+        width: 496px;
+        height: 128px;
+        margin: 0 auto;
+        background-image: url('../img/index-16.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
     }
   
     .section-02 {

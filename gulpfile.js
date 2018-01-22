@@ -31,6 +31,7 @@ gulp.task('webserver', function () {
 gulp.task('connect', function () {
     connect.server({
         root: './',
+        host: '192.168.2.105',
         livereload: true
     });
 })
