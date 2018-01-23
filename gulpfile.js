@@ -1,7 +1,6 @@
 "use strict";
 
 var gulp = require("gulp");
-var webserver = require('gulp-webserver');
 var less = require("gulp-less");
 var runSequence = require('run-sequence');  // 运行组件，原生为run,多任务并行或顺序
 // var rename = require('gulp-rename');  // 重命名
@@ -14,24 +13,10 @@ var connect = require('gulp-connect');
 var postcss = require('gulp-postcss');
 var px2rem = require('postcss-px2rem');
 
-gulp.task('webserver', function () {
-    gulp.src('./')
-        .pipe(webserver({
-            livereload: true,
-            port: 3000,
-            host: 'localhost',
-            directoryListing: {
-                enable: true,
-                path: './src/view/kaimenhong/template/index.html'
-            },
-            open: true
-        }));
-});
-
 gulp.task('connect', function () {
     connect.server({
         root: './',
-        host: '10.209.8.102',
+        host: '192.168.2.105', // 10.209.8.102  192.168.2.105
         livereload: true
     });
 })
@@ -51,9 +36,15 @@ gulp.task("less", function () {
         .pipe(connect.reload());
 })
 
+gulp.task('js', function () { 
+    gulp.src('./src/view/kaimenhong/js/*.js')
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', function () {
     gulp.watch('./src/view/kaimenhong/less/*.less', ['less']);
     gulp.watch('./src/view/kaimenhong/template/*.html', ['html']);
+    gulp.watch('./src/view/kaimenhong/js/*.js', ['js']);
 })
 
 gulp.task('default', ['connect', 'watch']);
