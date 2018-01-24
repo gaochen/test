@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>开门红</title>
 
-  <script type="text/javascript" src="/src/static/libs/flexible.js"></script>
+  <script type="text/javascript" src="../js/flexible.js"></script>
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/index.css">
 </head>
@@ -36,11 +36,12 @@
         </div>
         <p class="text">关注“和谐健康”公众号</p>
         <p class="text">即可免费领取90天公共交通意外伤害保障</p>
-        <div class="check mgAuto">
+        <div class="check mgAuto checkFollow">
           <span></span>
           <p>关注公众号</p>
         </div>
         <div class="btn"></div>
+        <div class="disble"></div>
       </div>
       <div class="section-02">
         <div class="title"></div>
@@ -58,11 +59,11 @@
         <p class="text">关注公众号并分享本页</p>
         <p class="text">即可获得5折投保公众交通意外险权益</p>
         <div class="checkBox">
-          <div class="check">
+          <div class="check checkFollow">
             <span></span>
             <p>关注公众号</p>
           </div>
-          <div class="check">
+          <div class="check checkShare">
             <span></span>
             <p>分享本页</p>
           </div>
@@ -90,8 +91,24 @@
         <p>长按二维码扫描关注公众号</p>
       </div>
     </div>
+    <div class="dialog">
+      <div class="share">
+          <img src="../img/index-39.png" alt="">
+          <span class="close"></span>
+      </div>
+      <div class="follow">
+          <img src="../img/index-38.png" alt="">
+          <span class="close"></span>
+      </div>
+      <div class="error">
+        <p>获取公众号关注状态失败<br />请刷新页面重试</p>
+        <span class="close">知道了</span>
+      </div>
+    </div>
   </div>
-  <script type="text/javascript" src="/src/static/libs/zepto.min.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+  <script type="text/javascript" src="../js/zepto.min.js"></script>
+  <script type="text/javascript" src="../js/storage.js"></script>
   <script type="text/javascript" src="../js/index.js"></script>
 </body>
 

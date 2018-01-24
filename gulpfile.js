@@ -16,7 +16,7 @@ var px2rem = require('postcss-px2rem');
 gulp.task('connect', function () {
     connect.server({
         root: './',
-        host: '192.168.2.105', // 10.209.8.102  192.168.2.105
+        host: '10.209.8.102', // 10.209.8.102  192.168.2.105
         livereload: true
     });
 })
