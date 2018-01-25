@@ -113,7 +113,7 @@ $(function() {
   $('.section-02').find('.btn').on('click', function() {
     if (userInfo.subscribe === 1) {
       if ($('.checkShare').hasClass('checkActive')) {
-        window.location.href = 'https://jk.anbanggroup.com/websitedat/pages/newmall/index.html#/'
+        window.location.href = ip + 'pages/kaimenhong/index.html#/detail?riskCode=1250182&sourceChannel=HXYD&discountName=web'
       } else {
         $('.follow').show()
         $('.dialog').css('display', 'flex')
