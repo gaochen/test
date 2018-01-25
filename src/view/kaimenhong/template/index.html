@@ -7,6 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>开门红</title>
 
+  <script>
+    if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==
+    'micromessenger' && window.location.search.indexOf('code') === -1) {
+      window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxaec1b9035e6a21ef&redirect_uri=https%3A%2F%2Fjk.anbanggroup.com%2Fwebsitedat%2Fweixin%2Fkaimenhong%2Ftemplate%2Findex.html&response_type=code&scope=snsapi_base&state=jyscgh-20d569f0-56eb-4fdd-a264-fb9c4c76cb33#wechat_redirect'
+    }
+  </script>
   <script type="text/javascript" src="../js/flexible.js"></script>
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/index.css">

@@ -4,6 +4,7 @@ $(function() {
 
   var userInfo = storage.get('userInfo')
   var shareInfo = storage.get('shareInfo', true)
+
   // 是否已经分享该活动
   if (userInfo && shareInfo) {
     var num = new Date().getTime() - shareInfo.time
@@ -27,13 +28,6 @@ $(function() {
       openId: null,
       subscribe: 0, // 公众号关注状态
       obtain: 0 // 是否已免费领取交通意外险
-    }
-  }
-
-  if (!shareInfo) {
-    shareInfo = {
-      openId: null,
-      time: null
     }
   }
 
@@ -71,6 +65,27 @@ $(function() {
             if (userInfo.obtain === 1) {
               $('.section-01').find('.btn').hide().siblings('.disable').show()
             }
+
+            // 是否已经分享该活动
+            if (shareInfo) {
+              var num = new Date().getTime() - shareInfo.time
+              if (num < 43200000 && userInfo.openId === shareInfo.openId) {
+                $('.checkShare').addClass('checkActive')
+              }
+            }
+
+            // 写入PV
+            $.ajax({
+              type: 'POST',
+              url: ip + 'mweb/user/activity/access',
+              data: JSON.stringify({
+                openId: userInfo.openId,
+                acCode: '1001',
+                acName: '开门红'
+              }),
+              contentType: 'application/json',
+              dataType: 'json'
+            })
           } else {
             $('.error').show()
             $('.dialog').css('display', 'flex')
@@ -118,12 +133,11 @@ $(function() {
   })
 
   // 分享活动页
-  var targetUrl = ip + 'pages/kaimenhong/template/index.html'
-  // var shareUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxaec1b9035e6a21ef&redirect_uri=' + targetUrl + '&response_type=code&scope=snsapi_base&state=jyscgh-20d569f0-56eb-4fdd-a264-fb9c4c76cb33#wechat_redirect', // 分享的URL地址
-  var shareUrl = targetUrl,
+  var targetUrl = location.href.split('#')[0]
+  var shareUrl = location.href.split('?')[0], // 分享的URL地址
     shareTitle = '开启美好旅途，和谐健康随行', // 分享的标题
     shareTimelineTitle = '免费领取公共交通意外险+5折投保权益！', // 朋友圈分享的标题
-    shareImage = ip + 'pages/kaimenhong/img/index-41.jpg', // 分享的图片地址
+    shareImage = ip + 'weixin/kaimenhong/img/index-41.png', // 分享的图片地址
     shareDesc = '免费领取公共交通意外险+5折投保权益！' // 分享的描述信息
 
   $.ajax({
@@ -137,7 +151,7 @@ $(function() {
       try {
         // eslint-disable-next-line
         wx.config({
-          debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
           appId: data.appId, // 必填，公众号的唯一标识
           timestamp: data.timestamp, // 必填，生成签名的时间戳
           nonceStr: data.nonceStr, // 必填，生成签名的随机串
@@ -154,7 +168,12 @@ $(function() {
             imgUrl: shareImage, // 分享图标
             success: function () {
               // 用户确认分享后执行的回调函数
-              alert(2)
+              shareInfo = {
+                openId: userInfo.openId,
+                time: new Date().getTime()
+              }
+              storage.set('shareInfo', shareInfo, true)
+              $('.checkShare').addClass('checkActive')
             },
             cancel: function () {
               // 用户取消分享后执行的回调函数
@@ -170,7 +189,12 @@ $(function() {
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
               // 用户确认分享后执行的回调函数
-              alert(3)
+              shareInfo = {
+                openId: userInfo.openId,
+                time: new Date().getTime()
+              }
+              storage.set('shareInfo', shareInfo, true)
+              $('.checkShare').addClass('checkActive')
             },
             cancel: function () {
               // 用户取消分享后执行的回调函数
