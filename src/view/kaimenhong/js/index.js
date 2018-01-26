@@ -1,6 +1,7 @@
 $(function() {
   var href = window.location.href.match(/http.+\/website[^\/]*\//gi)
   const ip = href ? href[0] : 'https://jk.anbanggroup.com/websitedat/'
+  // const ip = 'https://jk.anbanggroup.com/websiteyaoyao/'
 
   var userInfo = storage.get('userInfo')
   var shareInfo = storage.get('shareInfo', true)
@@ -43,7 +44,7 @@ $(function() {
     if (!userInfo.openId) {
       $.ajax({
         type: 'GET',
-        url: ip + 'mweb/user/activity/getSubscribeInfo?',
+        url: 'https://jk.anbanggroup.com/websiteyaoyao/mweb/user/activity/getSubscribeInfo?',
         data: {'code': code},
         contentType: "application/json",
         success: function(res) {
@@ -102,7 +103,7 @@ $(function() {
   // 点击免费领取按钮
   $('.section-01').find('.btn').on('click', function() {
     if (userInfo.subscribe === 1) {
-      window.location.href = 'https://jk.anbanggroup.com/websitedat/pages/newmall/index.html#/'
+      window.location.href = ip + 'pages/kaimenhong/index.html#/freeAccident'
     } else {
       $('.share').show()
       $('.dialog').css('display', 'flex')
@@ -136,7 +137,7 @@ $(function() {
   var targetUrl = location.href.split('#')[0]
   var shareUrl = location.href.split('?')[0], // 分享的URL地址
     shareTitle = '开启美好旅途，和谐健康随行', // 分享的标题
-    shareTimelineTitle = '免费领取公共交通意外险+5折投保权益！', // 朋友圈分享的标题
+    shareTimelineTitle = '开启美好旅途，和谐健康随行', // 朋友圈分享的标题
     shareImage = ip + 'weixin/kaimenhong/img/index-41.png', // 分享的图片地址
     shareDesc = '免费领取公共交通意外险+5折投保权益！' // 分享的描述信息
 
@@ -206,7 +207,6 @@ $(function() {
       }
     },
     error: function(res) {
-      alert('error')
     }
   })
 

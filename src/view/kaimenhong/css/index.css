@@ -184,7 +184,7 @@
 }
 
 .index .section .section-01 .check {
-  width: 2rem;
+  width: 2.4rem;
   height: 0.4rem;
   display: flex;
   flex-direction: row;
@@ -206,7 +206,7 @@
 
 .index .section .section-01 .check p {
   font-size: 0.32rem;
-  width: 1.8rem;
+  width: 2rem;
   color: #b2b2b2;
 }
 
@@ -228,7 +228,7 @@
   background-size: cover;
 }
 
-.index .section .section-01 .disble {
+.index .section .section-01 .disable {
   display: none;
   width: 6.613333rem;
   height: 1.706667rem;
@@ -354,7 +354,7 @@
 }
 
 .index .section .section-02 .checkBox .check {
-  width: 2rem;
+  width: 2.4rem;
   height: 0.4rem;
   display: flex;
   flex-direction: row;
@@ -375,8 +375,16 @@
 
 .index .section .section-02 .checkBox .check p {
   font-size: 0.32rem;
-  width: 1.8rem;
+  width: 2rem;
   color: #b2b2b2;
+}
+
+.index .section .section-02 .checkBox .checkShare {
+  width: 2rem;
+}
+
+.index .section .section-02 .checkBox .checkShare p {
+  width: 1.6rem;
 }
 
 .index .section .section-02 .checkBox .checkActive span {
