@@ -44,7 +44,7 @@ $(function() {
     if (!userInfo.openId) {
       $.ajax({
         type: 'GET',
-        url: 'https://jk.anbanggroup.com/websiteyaoyao/mweb/user/activity/getSubscribeInfo?',
+        url: ip + 'mweb/user/activity/getSubscribeInfo?',
         data: {'code': code},
         contentType: "application/json",
         success: function(res) {
