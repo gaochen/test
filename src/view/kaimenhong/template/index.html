@@ -8,9 +8,18 @@
   <title>开启美好旅途，和谐健康随行</title>
 
   <script>
-    if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==
-    'micromessenger' && window.location.search.indexOf('code') === -1) {
-      window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxaec1b9035e6a21ef&redirect_uri=https%3A%2F%2Fjk.anbanggroup.com%2Fwebsitedat%2Fweixin%2Fkaimenhong%2Ftemplate%2Findex.html&response_type=code&scope=snsapi_base&state=jyscgh-20d569f0-56eb-4fdd-a264-fb9c4c76cb33#wechat_redirect'
+    var hrefArr = window.location.href.match(/\/website([^/]*)\//i)
+    var env = hrefArr ? hrefArr[1] : 'dat'
+    var sms = window.location.href.match(/SMS$/i)
+    var redirect_uri = `https://jk.anbanggroup.com/website${env}/weixin/kaimenhong/template/index.html`
+
+    if (sms && navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==
+      'micromessenger' && window.location.search.indexOf('code') === -1) {
+      redirect_uri = redirect_uri + '?source=SMS'
+      window.location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxaec1b9035e6a21ef&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=jyscgh-20d569f0-56eb-4fdd-a264-fb9c4c76cb33#wechat_redirect`
+    } else if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==
+      'micromessenger' && window.location.search.indexOf('code') === -1) {
+      window.location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxaec1b9035e6a21ef&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=jyscgh-20d569f0-56eb-4fdd-a264-fb9c4c76cb33#wechat_redirect`
     }
   </script>
   <script type="text/javascript" src="../js/flexible.js"></script>
@@ -90,6 +99,7 @@
         <p>活动期间，一个账号只能领取一份公共交通意外险赠险；</p>
         <p>公共交通意外险赠险只能为本人投保，且不可退保；</p>
         <p>五折购买权益被保人不限本人；</p>
+        <p>参与本活动，客服人员可能会通过电话进行回访；</p>
         <p>本活动解释权归和谐健康保险股份有限公司所有。</p>
       </div>
       <div class="section-04">
@@ -99,15 +109,16 @@
     </div>
     <div class="dialog">
       <div class="share">
-          <img src="../img/index-39.png" alt="">
-          <span class="close"></span>
+        <img src="../img/index-39.png" alt="">
+        <span class="close"></span>
       </div>
       <div class="follow">
-          <img src="../img/index-38.png" alt="">
-          <span class="close"></span>
+        <img src="../img/index-38.png" alt="">
+        <span class="close"></span>
       </div>
       <div class="error">
-        <p>获取公众号关注状态失败<br />请刷新页面重试</p>
+        <p>获取公众号关注状态失败
+          <br />请刷新页面重试</p>
         <span class="close">知道了</span>
       </div>
     </div>
