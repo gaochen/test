@@ -144,7 +144,7 @@ $(function() {
   var shareUrl = location.href.split('?')[0], // 分享的URL地址
     shareTitle = '免费领取公共交通意外险+5折投保权益！', // 分享的标题
     shareTimelineTitle = '免费领取公共交通意外险+5折投保权益！', // 朋友圈分享的标题
-    shareImage = ip + 'weixin/kaimenhong/img/index-41.png', // 分享的图片地址
+    shareImage = ip + 'weixin/kaimenhong/img/index-41.jpg', // 分享的图片地址
     shareDesc = '开启美好旅途，和谐健康随行' // 分享的描述信息
 
   $.ajax({
