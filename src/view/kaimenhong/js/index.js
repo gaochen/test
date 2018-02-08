@@ -104,6 +104,10 @@ $(function() {
         }
       })
     }
+  } else {
+    // 非微信浏览器文案修改
+    $('.index').find('.section-04 p').text('微信搜索公众号『和谐健康』关注后即可领取')
+    $('.browser').css('display', 'block').siblings('.wechat').hide()
   }
 
   // 点击免费领取按钮
