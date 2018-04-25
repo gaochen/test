@@ -16,7 +16,8 @@ $(function() {
   if (userInfo && shareInfo) {
     var num = new Date().getTime() - shareInfo.time
     if (num < 43200000 && userInfo.openId === shareInfo.openId) {
-      $('.checkShare').addClass('checkActive')
+      // $('.checkShare').addClass('checkActive')
+      $('.part-02').find('.btn').addClass('checkActive')
     }
   }
 
@@ -28,7 +29,7 @@ $(function() {
 
     // 是否已经免费领取
     if (userInfo.obtain === 1) {
-      $('.section-01').find('.btn').hide().siblings('.disable').show()
+      $('.part-01').find('.btn').hide().siblings('.disable').show()
     }
   } else {
     userInfo = {
@@ -77,7 +78,8 @@ $(function() {
             if (shareInfo) {
               var num = new Date().getTime() - shareInfo.time
               if (num < 43200000 && userInfo.openId === shareInfo.openId) {
-                $('.checkShare').addClass('checkActive')
+                // $('.checkShare').addClass('checkActive')
+                $('.part-02').find('.btn').addClass('checkActive')
               }
             }
 
@@ -106,12 +108,12 @@ $(function() {
     }
   } else {
     // 非微信浏览器文案修改
-    $('.index').find('.section-04 p').text('微信搜索公众号『和谐健康』关注后即可领取')
+    $('.index').find('.tips').text('微信搜索公众号『和谐健康』关注后即可领取')
     $('.browser').css('display', 'block').siblings('.wechat').hide()
   }
 
   // 点击免费领取按钮
-  $('.section-01').find('.btn').on('click', function() {
+  $('.part-01').find('.btn').on('click', function() {
     if (userInfo.subscribe === 1) {
       window.location.href = ip + 'pages/kaimenhong/index.html#/freeAccident'
     } else {
@@ -121,9 +123,9 @@ $(function() {
   })
 
   // 点击5折投保按钮
-  $('.section-02').find('.btn').on('click', function() {
+  $('.part-02').find('.btn').on('click', function() {
     if (userInfo.subscribe === 1) {
-      if ($('.checkShare').hasClass('checkActive')) {
+      if ($('.part-02').find('.btn').hasClass('checkActive')) {
         window.location.href = ip + 'pages/kaimenhong/index.html#/detail?riskCode=1250182&sourceChannel=HXYD&discountName=web'
       } else {
         $('.follow').show()
@@ -146,10 +148,10 @@ $(function() {
   // 分享活动页
   var targetUrl = location.href.split('#')[0]
   var shareUrl = location.href.split('?')[0], // 分享的URL地址
-    shareTitle = '免费领取公共交通意外险+5折投保权益！', // 分享的标题
-    shareTimelineTitle = '免费领取公共交通意外险+5折投保权益！', // 朋友圈分享的标题
-    shareImage = ip + 'weixin/kaimenhong/img/index-41.jpg', // 分享的图片地址
-    shareDesc = '开启美好旅途，和谐健康随行' // 分享的描述信息
+    shareTitle = '劳动最光荣，成果需呵护！', // 分享的标题
+    shareTimelineTitle = '劳动最光荣，成果需呵护', // 朋友圈分享的标题
+    shareImage = ip + 'weixin/kaimenhong/img/index-76.jpg', // 分享的图片地址
+    shareDesc = '四十万出行意外险免费送！给自己穿上交通意外“铠甲”的同时，别忘了给孩子一份重疾险小棉袄' // 分享的描述信息
 
   $.ajax({
     type: 'POST',
@@ -184,7 +186,8 @@ $(function() {
                 time: new Date().getTime()
               }
               storage.set('shareInfo', shareInfo, true)
-              $('.checkShare').addClass('checkActive')
+              // $('.checkShare').addClass('checkActive')
+              $('.part-02').find('.btn').addClass('checkActive')
             },
             cancel: function () {
               // 用户取消分享后执行的回调函数
@@ -205,7 +208,8 @@ $(function() {
                 time: new Date().getTime()
               }
               storage.set('shareInfo', shareInfo, true)
-              $('.checkShare').addClass('checkActive')
+              // $('.checkShare').addClass('checkActive')
+              $('.part-02').find('.btn').addClass('checkActive')
             },
             cancel: function () {
               // 用户取消分享后执行的回调函数

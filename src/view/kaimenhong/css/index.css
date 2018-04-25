@@ -6,575 +6,370 @@
   position: relative;
 }
 
-.index .bg {
+.index .section-01 {
   width: 100%;
+  height: 9.333333rem;
+  background-image: url('../img/index-47.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-02 {
+  width: 100%;
+  height: 8.266667rem;
+  background-image: url('../img/index-48.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-02 .title-01 {
+  width: 7.306667rem;
+  height: 0.586667rem;
+  margin: 0 auto;
+  background-image: url('../img/index-49.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-02 .content {
+  width: 9.146667rem;
+  height: 6.4rem;
+  background-color: #fff;
+  border-radius: 0.186667rem;
+  margin: 0.72rem auto 0 auto;
+}
+
+.index .section-02 .content .title-02 {
+  width: 6.4rem;
+  height: 0.96rem;
+  background-image: url('../img/index-50.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  top: -0.32rem;
+}
+
+.index .section-02 .content .title-03 {
+  width: 5.68rem;
+  height: 0.453333rem;
+  background-image: url('../img/index-51.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.index .section-02 .content .list {
+  width: 8rem;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.32rem auto 0 auto;
+}
+
+.index .section-02 .content .list .item {
+  width: 2.666667rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.index .section-02 .content .list .item img {
+  width: 2.026667rem;
+  height: 2.026667rem;
+  display: block;
+  overflow: hidden;
+}
+
+.index .section-02 .content .list .item p {
+  width: 100%;
+  font-size: 0.373333rem;
+  color: #8B4B2A;
+  text-align: center;
+}
+
+.index .section-02 .content .btn {
+  width: 7.706667rem;
+  height: 2.133333rem;
+  margin: 0.16rem auto 0 auto;
+  background-image: url('../img/index-55.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-03 {
+  width: 100%;
+  height: 20.426667rem;
+  background-color: #71B333;
+}
+
+.index .section-03 .title-01 {
+  width: 8.346667rem;
+  height: 1.066667rem;
   margin: 0 auto;
-  overflow: hidden;
+  background-image: url('../img/index-56.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-.index .bg .bg-01 {
+.index .section-03 .content {
+  width: 9.68rem;
+  height: 18.506667rem;
+  margin: 0.8rem auto 0 auto;
+  background-image: url('../img/index-63.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.index .section-03 .content .part-01 {
   width: 100%;
-  height: 5.866667rem;
-  background-image: url('../img/index-05.jpg');
+  height: 9.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.index .section-03 .content .part-01 .title-02 {
+  width: 6.986667rem;
+  height: 1.226667rem;
+  background-image: url('../img/index-57.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
+  top: -0.4rem;
 }
 
-.index .bg .bg-02 {
-  width: 100%;
-  height: 12.133333rem;
-  background-image: url('../img/index-06.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .bg .bg-03 {
-  width: 100%;
-  height: 11.866667rem;
-  background-image: url('../img/index-07.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .bg .bg-04 {
-  width: 100%;
-  height: 12.44rem;
-  background-image: url('../img/index-08.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.index .section .decorate-01 {
-  width: 1.653333rem;
-  height: 1.653333rem;
-  position: absolute;
-  top: 4.32rem;
-  left: 0.666667rem;
-  z-index: 10;
-  background-image: url('../img/index-17.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .decorate-02 {
-  width: 1.533333rem;
-  height: 2.8rem;
-  position: absolute;
-  top: 6.186667rem;
-  right: 0;
-  z-index: 10;
-  background-image: url('../img/index-18.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .decorate-03 {
-  width: 0.986667rem;
-  height: 1.12rem;
-  position: absolute;
-  top: 13.6rem;
-  left: 0;
-  z-index: 10;
-  background-image: url('../img/index-19.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .decorate-03 {
-  width: 0.986667rem;
-  height: 1.12rem;
-  position: absolute;
-  top: 13.6rem;
-  left: 0;
-  z-index: 10;
-  background-image: url('../img/index-19.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .decorate-04 {
-  width: 0.92rem;
-  height: 0.986667rem;
-  position: absolute;
-  top: 20.533333rem;
-  left: 0;
-  z-index: 10;
-  background-image: url('../img/index-20.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .decorate-05 {
-  width: 0.96rem;
-  height: 1.613333rem;
-  position: absolute;
-  top: 26.4rem;
-  right: 0;
-  z-index: 10;
-  background-image: url('../img/index-21.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-01 {
-  width: 9.413333rem;
-  height: 12.946667rem;
-  background-image: url('../img/index-01.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-left: 0.4rem;
-  margin-top: 4.853333rem;
-  overflow: hidden;
-}
-
-.index .section .section-01 .title {
-  width: 8.506667rem;
-  height: 2.693333rem;
-  margin: 0 auto;
-  background-image: url('../img/index-09.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-01 .imgBox {
-  width: 8.066667rem;
-  height: 4.44rem;
-  overflow: hidden;
-  margin: 0 auto 0.533333rem auto;
+.index .section-03 .content .part-01 .list {
+  width: 7.786667rem;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between;
 }
 
-.index .section .section-01 .imgBox img {
-  width: 3.866667rem;
-  height: 2.053333rem;
-  display: block;
+.index .section-03 .content .part-01 .list img {
+  width: 3.893333rem;
+  height: 1.973333rem;
   overflow: hidden;
+  display: block;
 }
 
-.index .section .section-01 .text {
+.index .section-03 .content .part-01 .para {
+  display: flex;
   width: 100%;
-  height: auto;
-  font-size: 0.373333rem;
-  color: #666666;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.213333rem;
+}
+
+.index .section-03 .content .part-01 .para p {
+  width: 100%;
   text-align: center;
+  color: #333333;
+  font-size: 0.373333rem;
   margin-bottom: 0.213333rem;
 }
 
-.index .section .section-01 .check {
-  width: 2.4rem;
-  height: 0.4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 0.533333rem;
-}
-
-.index .section .section-01 .check span {
-  display: block;
-  width: 0.266667rem;
-  height: 0.266667rem;
-  background-image: url('../img/index-14.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-right: 0.133333rem;
-}
-
-.index .section .section-01 .check p {
-  font-size: 0.32rem;
-  width: 2rem;
-  color: #b2b2b2;
-}
-
-.index .section .section-01 .checkActive span {
-  background-image: url('../img/index-15.png');
-}
-
-.index .section .section-01 .checkActive p {
-  color: #f8623e;
-}
-
-.index .section .section-01 .btn {
-  width: 6.613333rem;
-  height: 1.706667rem;
-  margin: 0 auto;
-  background-image: url('../img/index-16.png');
+.index .section-03 .content .part-01 .btn {
+  width: 7.706667rem;
+  height: 2.133333rem;
+  margin: 0.16rem auto 0 auto;
+  background-image: url('../img/index-62.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-.index .section .section-01 .disable {
+.index .section-03 .content .part-01 .disable {
   display: none;
-  width: 6.613333rem;
-  height: 1.706667rem;
-  margin: 0 auto;
-  background-image: url('../img/index-40.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 {
-  width: 9.413333rem;
-  height: 11.88rem;
-  background-image: url('../img/index-02.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-left: 0.4rem;
-  margin-top: 0.4rem;
-  overflow: hidden;
-}
-
-.index .section .section-02 .title {
-  width: 8.506667rem;
-  height: 2.693333rem;
-  margin: 0 auto;
-  background-image: url('../img/index-22.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .imgBox {
-  width: 7.2rem;
-  height: 2.173333rem;
-  margin: 0 auto 0.533333rem auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.index .section .section-02 .imgBox .LBox {
-  width: 2.826667rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.index .section .section-02 .imgBox .LBox .pic {
-  width: 100%;
-  height: 2.173333rem;
-  background-image: url('../img/index-25.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .imgBox .LBox .text {
-  width: 1.88rem;
-  height: 0.44rem;
-  background-image: url('../img/index-23.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .imgBox .MBox {
-  width: 0.733333rem;
+  width: 6.693333rem;
   height: 1.066667rem;
-  background-image: url('../img/index-27.png');
+  margin: 0.48rem auto 0 auto;
+  background-image: url('../img/index-80.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-.index .section .section-02 .imgBox .RBox {
-  width: 2.52rem;
-  height: 100%;
+.index .section-03 .content .part-02 {
+  width: 100%;
+  height: 8.826667rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.index .section .section-02 .imgBox .RBox .pic {
-  width: 100%;
-  height: 2.173333rem;
-  background-image: url('../img/index-26.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .imgBox .RBox .text {
-  width: 1.88rem;
-  height: 0.44rem;
-  background-image: url('../img/index-24.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .textBox {
-  width: 7.2rem;
-  height: 1.066667rem;
-  margin: 0 auto 0.533333rem auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.index .section .section-02 .textBox .LBox {
-  width: 2.373333rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.index .section .section-02 .textBox .LBox .pic {
-  width: 100%;
-  height: 0.44rem;
-  background-image: url('../img/index-45.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .textBox .RBox {
-  width: 2.533333rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.index .section .section-02 .textBox .RBox .pic {
-  width: 100%;
-  height: 0.453333rem;
-  background-image: url('../img/index-44.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .textBox .RBox .originPrice {
-  width: 1.586667rem;
-  height: 0.333333rem;
-  background-image: url('../img/index-46.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-02 .text {
-  width: 100%;
-  height: auto;
-  font-size: 0.373333rem;
-  color: #666666;
-  text-align: center;
-  margin-bottom: 0.213333rem;
-}
-
-.index .section .section-02 .checkBox {
-  width: 5.013333rem;
-  height: 0.4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0.32rem auto 0.533333rem auto;
-}
-
-.index .section .section-02 .checkBox .check {
-  width: 2.4rem;
-  height: 0.4rem;
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-.index .section .section-02 .checkBox .check span {
-  display: block;
-  width: 0.266667rem;
-  height: 0.266667rem;
-  background-image: url('../img/index-14.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-right: 0.133333rem;
-}
-
-.index .section .section-02 .checkBox .check p {
-  font-size: 0.32rem;
-  width: 2rem;
-  color: #b2b2b2;
-}
-
-.index .section .section-02 .checkBox .checkShare {
-  width: 2rem;
-}
-
-.index .section .section-02 .checkBox .checkShare p {
-  width: 1.6rem;
-}
-
-.index .section .section-02 .checkBox .checkActive span {
-  background-image: url('../img/index-15.png');
-}
-
-.index .section .section-02 .checkBox .checkActive p {
-  color: #f8623e;
-}
-
-.index .section .section-02 .btn {
-  width: 6.613333rem;
-  height: 1.706667rem;
-  margin: 0 auto;
-  background-image: url('../img/index-28.png');
+.index .section-03 .content .part-02 .title-03 {
+  width: 3.253333rem;
+  height: 1.093333rem;
+  background-image: url('../img/index-64.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-.index .section .section-03 {
-  width: 9.413333rem;
-  height: 7.026667rem;
-  background-image: url('../img/index-03.png');
+.index .section-03 .content .part-02 .title-04 {
+  width: 6.88rem;
+  height: 0.586667rem;
+  margin: 0.48rem 0 0.4rem 0;
+  background-image: url('../img/index-65.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin-left: 0.4rem;
-  margin-top: 0.4rem;
-  overflow: hidden;
 }
 
-.index .section .section-03 .title {
-  width: 100%;
-  height: 0.44rem;
-  margin: 0.666667rem 0 0.666667rem 0;
+.index .section-03 .content .part-02 .list {
+  width: 7.786667rem;
+  height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.index .section-03 .content .part-02 .list img {
+  width: 3.893333rem;
+  height: 1.973333rem;
+  overflow: hidden;
+  display: block;
+}
+
+.index .section-03 .content .part-02 .para {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.index .section .section-03 .title .icon {
-  width: 0.693333rem;
-  height: 0.28rem;
-  margin: 0 0.213333rem;
-  background-image: url('../img/index-29.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-03 .title .content {
-  width: 2.76rem;
-  height: 0.44rem;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-around;
-}
-
-.index .section .section-03 .title .content div {
-  width: 0.44rem;
-  height: 0.44rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.index .section .section-03 .title .content div:nth-child(1) {
-  background-image: url('../img/index-30.png');
-}
-
-.index .section .section-03 .title .content div:nth-child(2) {
-  background-image: url('../img/index-31.png');
-}
-
-.index .section .section-03 .title .content div:nth-child(3) {
-  background-image: url('../img/index-32.png');
-}
-
-.index .section .section-03 .title .content div:nth-child(4) {
-  background-image: url('../img/index-33.png');
-}
-
-.index .section .section-03 p {
-  width: 7.6rem;
-  padding-left: 0.746667rem;
-  height: auto;
-  line-height: 0.586667rem;
-  margin: 0 auto 0.12rem auto;
-  background-repeat: no-repeat;
-  background-position: 0 0.053333rem;
-  background-size: 0.453333rem 0.453333rem;
-  font-size: 0.373333rem;
-  color: #fee2e2;
-}
-
-.index .section .section-03 p:nth-child(2) {
-  background-image: url('../img/index-34.png');
-}
-
-.index .section .section-03 p:nth-child(3) {
-  background-image: url('../img/index-35.png');
-}
-
-.index .section .section-03 p:nth-child(4) {
-  background-image: url('../img/index-36.png');
-}
-
-.index .section .section-03 p:nth-child(5) {
-  background-image: url('../img/index-37.png');
-}
-
-.index .section .section-03 p:nth-child(6) {
-  background-image: url('../img/index-42.png');
-}
-
-.index .section .section-04 {
+.index .section-03 .content .part-02 .para p {
   width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-top: 0.16rem;
+  text-align: center;
+  color: #333333;
+  font-size: 0.373333rem;
+  margin-bottom: 0.213333rem;
 }
 
-.index .section .section-04 img {
-  display: block;
-  width: 2.666667rem;
-  height: 2.666667rem;
+.index .section-03 .content .part-02 .btn {
+  width: 7.706667rem;
+  height: 2.133333rem;
+  margin: 0.106667rem auto 0 auto;
+  background-image: url('../img/index-68.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-04 {
+  width: 100%;
+  height: 12.666667rem;
+  background-image: url('../img/index-69.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-04 .content {
+  width: 9.066667rem;
+  height: 7.573333rem;
+  border-bottom: 0.013333rem solid #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.index .section-04 .content .title {
+  width: 5.973333rem;
+  height: 0.506667rem;
+  margin: 0.853333rem auto 0 auto;
+  background-image: url('../img/index-75.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-04 .content .list {
+  width: 8.533333rem;
+  height: auto;
   margin: 0.4rem auto;
 }
 
-.index .section .section-04 p {
-  color: #fadedf;
-  font-size: 0.293333rem;
+.index .section-04 .content .list .item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.index .section-04 .content .list .item span {
+  width: 0.373333rem;
+  height: 0.373333rem;
+  margin-top: 0.133333rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-04 .content .list .item p {
+  width: 7.786667rem;
+  height: auto;
+  font-size: 0.426667rem;
+  color: #fff;
+  line-height: 0.64rem;
+  margin-bottom: 0.266667rem;
+}
+
+.index .section-04 .content .list .item .item-icon-1 {
+  background-image: url('../img/index-70.png');
+}
+
+.index .section-04 .content .list .item .item-icon-2 {
+  background-image: url('../img/index-71.png');
+}
+
+.index .section-04 .content .list .item .item-icon-3 {
+  background-image: url('../img/index-72.png');
+}
+
+.index .section-04 .content .list .item .item-icon-4 {
+  background-image: url('../img/index-73.png');
+}
+
+.index .section-04 .qrcode {
+  width: 2.666667rem;
+  height: 2.666667rem;
+  margin: 0.8rem auto 0.533333rem auto;
+  background-image: url('../img/index-74.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.index .section-04 .tips {
+  width: 100%;
+  height: auto;
+  font-size: 0.32rem;
+  color: #fff;
   text-align: center;
 }
 
