@@ -11,7 +11,7 @@
     var hrefArr = window.location.href.match(/\/website([^/]*)\//i)
     var env = hrefArr ? hrefArr[1] : 'dat'
     var sms = window.location.href.match(/SMS$/i)
-    var redirect_uri = `https://jk.anbanggroup.com/website${env}/weixin/kaimenhong/template/index.html`
+    var redirect_uri = `https://jk.anbanggroup.com/website${env}/weixin/huixinan/template/index.html`
 
     if (sms && navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==
       'micromessenger' && window.location.search.indexOf('code') === -1) {

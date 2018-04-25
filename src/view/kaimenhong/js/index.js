@@ -1,9 +1,9 @@
 $(function() {
   // 短信渠道
-  var source = getURLParams('source')
-  if (source === 'SMS') {
-    $('.index').addClass('SMS')
-  }
+  // var source = getURLParams('source')
+  // if (source === 'SMS') {
+  //   $('.index').addClass('SMS')
+  // }
 
   var href = window.location.href.match(/http.+\/website[^\/]*\//gi)
   const ip = href ? href[0] : 'https://jk.anbanggroup.com/websitedat/'
@@ -115,7 +115,7 @@ $(function() {
   // 点击免费领取按钮
   $('.part-01').find('.btn').on('click', function() {
     if (userInfo.subscribe === 1) {
-      window.location.href = ip + 'pages/kaimenhong/index.html#/freeAccident'
+      window.location.href = ip + 'pages/huixinan/index.html#/freeAccident'
     } else {
       $('.share').show()
       $('.dialog').css('display', 'flex')
@@ -126,7 +126,7 @@ $(function() {
   $('.part-02').find('.btn').on('click', function() {
     if (userInfo.subscribe === 1) {
       if ($('.part-02').find('.btn').hasClass('checkActive')) {
-        window.location.href = ip + 'pages/kaimenhong/index.html#/detail?riskCode=1250182&sourceChannel=HXYD&discountName=web'
+        window.location.href = ip + 'pages/huixinan/index.html#/detail?riskCode=1250182&sourceChannel=HXYD&discountName=web'
       } else {
         $('.follow').show()
         $('.dialog').css('display', 'flex')
@@ -148,9 +148,9 @@ $(function() {
   // 分享活动页
   var targetUrl = location.href.split('#')[0]
   var shareUrl = location.href.split('?')[0], // 分享的URL地址
-    shareTitle = '劳动最光荣，成果需呵护！', // 分享的标题
+    shareTitle = '劳动最光荣，成果需呵护', // 分享的标题
     shareTimelineTitle = '劳动最光荣，成果需呵护', // 朋友圈分享的标题
-    shareImage = ip + 'weixin/kaimenhong/img/index-76.jpg', // 分享的图片地址
+    shareImage = ip + 'weixin/huixinan/img/index-76.jpg', // 分享的图片地址
     shareDesc = '四十万出行意外险免费送！给自己穿上交通意外“铠甲”的同时，别忘了给孩子一份重疾险小棉袄' // 分享的描述信息
 
   $.ajax({
