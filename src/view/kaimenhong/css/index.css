@@ -4,6 +4,7 @@
   overflow: hidden;
   margin: 0 auto;
   position: relative;
+  user-select: none;
 }
 
 .index .section-01 {
@@ -359,10 +360,8 @@
   width: 2.666667rem;
   height: 2.666667rem;
   margin: 0.8rem auto 0.533333rem auto;
-  background-image: url('../img/index-74.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  display: block;
+  overflow: hidden;
 }
 
 .index .section-04 .tips {
