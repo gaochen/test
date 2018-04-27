@@ -1,9 +1,28 @@
-$(function() {
+$(function () {
   // 短信渠道
   // var source = getURLParams('source')
   // if (source === 'SMS') {
   //   $('.index').addClass('SMS')
   // }
+
+  var browser = {
+    versions: function () {
+      var u = navigator.userAgent, app = navigator.appVersion;
+      return {         //移动终端浏览器版本信息
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      };
+    }()
+  }
+
+  if (browser.versions.mobile) {
+    $('.section-02').find('.btn').on('click', function() {
+      window.location.href = 'https://www.anbangjr.com/lcb_webView/lcbproductinsurance/getDetailsInsurance_view?pcode=2140322&src=3&tel=&kuser=&channelTypeCode=5'
+    })
+  } else {
+    $('.section-02').find('.btn').on('click', function() {
+      window.location.href = 'http://www.ab95569.com/ConfigurationDetailsPage/indexIframe.do?prono=2140322&indexFlag=1'
+    })
+  }
 
   var href = window.location.href.match(/http.+\/website[^\/]*\//gi)
   const ip = href ? href[0] : 'https://jk.anbanggroup.com/websitedat/'
@@ -52,9 +71,9 @@ $(function() {
       $.ajax({
         type: 'GET',
         url: ip + 'mweb/user/activity/getSubscribeInfo?',
-        data: {'code': code},
+        data: { 'code': code },
         contentType: "application/json",
-        success: function(res) {
+        success: function (res) {
           if (res.operateStr === 'success') {
 
             userInfo = {
@@ -71,7 +90,7 @@ $(function() {
 
             // 是否已经免费领取
             if (userInfo.obtain === 1) {
-              $('.section-01').find('.btn').hide().siblings('.disable').show()
+              $('.part-01').find('.btn').hide().siblings('.disable').show()
             }
 
             // 是否已经分享该活动
@@ -100,7 +119,7 @@ $(function() {
             $('.dialog').css('display', 'flex')
           }
         },
-        error: function() {
+        error: function () {
           $('.error').show()
           $('.dialog').css('display', 'flex')
         }
@@ -113,7 +132,7 @@ $(function() {
   }
 
   // 点击免费领取按钮
-  $('.part-01').find('.btn').on('click', function() {
+  $('.part-01').find('.btn').on('click', function () {
     if (userInfo.subscribe === 1) {
       window.location.href = ip + 'pages/huixinan/index.html#/freeAccident'
     } else {
@@ -123,7 +142,7 @@ $(function() {
   })
 
   // 点击5折投保按钮
-  $('.part-02').find('.btn').on('click', function() {
+  $('.part-02').find('.btn').on('click', function () {
     if (userInfo.subscribe === 1) {
       if ($('.part-02').find('.btn').hasClass('checkActive')) {
         window.location.href = ip + 'pages/huixinan/index.html#/detail?riskCode=1250182&sourceChannel=HXYD&discountName=web'
@@ -138,7 +157,7 @@ $(function() {
   })
 
   // 关闭弹出层
-  $('.close').on('click', function() {
+  $('.close').on('click', function () {
     $('.share').hide()
     $('.follow').hide()
     $('.error').hide()
@@ -156,7 +175,7 @@ $(function() {
   $.ajax({
     type: 'POST',
     url: ip + 'mweb/jssdk/getotherwxconfig',
-    data: {url: targetUrl},
+    data: { url: targetUrl },
     contentType: 'application/x-www-form-urlencoded',
     dataType: 'json',
     success: function (res) {
@@ -220,7 +239,7 @@ $(function() {
         console.log(error)
       }
     },
-    error: function(res) {
+    error: function (res) {
     }
   })
 
