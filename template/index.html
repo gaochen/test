@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆</title>
+</head>
+
+<body>
+    <div>这是登陆页面</div>
+    <div>
+        用户名
+        <input type="text" class="username">
+    </div>
+    <div>
+        密码
+        <input type="password" class="password">
+    </div>
+    <button class="login">登陆</button>
+
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {        
+            $('.login').on('click', function() {
+                let username = $('.username').val()
+                let password = $('.password').val()
+                
+                // if (!username || !password) {
+                //     alert('不能为空')
+                //     return false
+                // }
+
+                let data = {
+                    'username': username,
+                    'password': password
+                }
+
+                $.ajax({
+                    method : 'POST',
+                    dataType: 'json',
+                    url: 'http://127.0.0.1:3000/login',
+                    data: data,
+                    success: function(res) {
+                        console.log(1)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

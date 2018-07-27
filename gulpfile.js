@@ -36,7 +36,7 @@ gulp.task('connect', function () {
 })
 
 gulp.task('html', function () {
-    gulp.src('./index.html')
+    gulp.src('./template/*.html')
         .pipe(connect.reload());
 });
 
@@ -57,7 +57,7 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     // gulp.watch('./src/view/kaimenhong/less/*.less', ['less']);
-    gulp.watch('./index.html', ['html']);
+    gulp.watch('./template/*.html', ['html']);
     // gulp.watch('./src/view/kaimenhong/js/*.js', ['js']);
 })
 
